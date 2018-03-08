@@ -1,0 +1,223 @@
+/* ------------------------------------------------------------ */
+/* imports and utilities */
+
+/* 3rd-party CSS files */
+@import 'vendor/h5bp-head.css';
+@import 'vendor/normalize.css';
+@import 'vendor/h5bp-tail.css';
+
+/* use a more intuitive box sizing model (http://is.gd/wNVjAo) */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Scale down images and embedded videos so they don't overflow their parents */
+img, object { max-width: 100%; }
+
+/*	Development/layout aid. Remove the comments
+	on this rule in order to draw boxes around DIVs
+	and other elements used for layout. */
+/* 
+div, main, article, section, aside, hgroup, header, footer, address, nav {
+	border: 1px solid rgba(255,0,0,0.15) !important;
+	background: rgba(255,0,0,0.05) !important;		
+}
+*/
+
+
+/* ------------------------------------------------------------ */
+/* start project-specifc styles below this line */
+
+body {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	line-height: 1.5em;
+	color: #222;
+	background: #FFFFFF;
+}
+
+/*	Generally, you will only want one container element in
+	the document, wrapping around the main content area. 
+	If you have more than one container, you are probably doing
+	something wrong. 	
+*/
+.container {
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 10em;
+	margin-left: auto;
+	width: 100%;
+}
+
+figure {
+	margin: 0;
+}
+
+/* H1 */
+h1 {
+	color: #4C2817;	
+}
+
+/* caption */
+figcaption p {
+    font-family: 'Montserrat', sans-serif;	font-size: 0.7rem;
+	line-height: 1.5em;
+	color: #4C2817;
+}
+
+
+/* ------------------------------------------ */
+/* global navbar */
+
+.global-nav {
+	background: #C8FF71;
+}
+
+.global-nav ul {
+	margin: 0 auto 0 auto;
+	padding: 0 0 0 0.75rem;
+	max-width: 900px;	
+}
+
+.global-nav li {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.global-nav a {
+	display: block;
+	padding: 0.25em 0.50em;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 0.7rem;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	text-decoration: none;
+	color: #4E5741;
+}
+
+.global-nav .sitename {
+	margin-right: 0.75em;
+	font-weight: bolder;
+	font-weight: 600;
+	color: #205709;
+}
+
+.global-nav a:hover {
+	background: #ffffff;
+    font-weight: bolder;
+}
+
+.global-nav a:active {
+    background-color: #ffffff;
+}
+
+
+/* ------------------------------------------ */
+/* title of the entire story */
+
+.title-area-body {
+	height: 400px;
+	background-image: url('../img/isaac-benhesed-249427.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.title-area-text {
+	margin: 0 auto 0 auto;
+	padding: 2rem 1rem 0 1rem;
+	max-width: 900px;	
+}
+
+.title-area-text h1 {
+	display: inline-block;
+	margin: 0 0 0.25em 0;
+	padding: 0 0 0.25em 0;
+	border-bottom: 1.5px double #EB572A;
+	font-size: 1.5em;
+	line-height: 1.125em;
+	font-weight: normal;
+	font-weight: 600;
+	color: #4C2817;
+	opacity: 0.9;
+}
+
+.title-area-text h5 {
+	margin: 0;
+	font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	color: #4C2817;
+}
+
+.title-area-caption {
+	margin: 0 auto 0 auto;
+	padding: 0.5em 1rem 0 1rem;
+	max-width: 900px;	
+	font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+	font-size: 0.8em;
+	line-height: 1.5em;
+	color: #4C2817;
+}
+
+/* wider screens */
+@media (min-width: 690px) {
+	
+	.title-area-body {
+		padding: 3rem 1rem 0 1rem;
+		height: 700px;
+	}
+
+	.title-area-text h1 {
+		font-size: 2.5em;
+		line-height: 1.125em;
+	}
+
+}
+
+
+/* ------------------------------------------ */
+/* photos and text */
+
+.photo-grid {
+	margin: 3em auto 0 auto;
+	padding: 0 1rem;
+	max-width: 900px;	
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 1rem;
+}
+
+figure {
+	grid-column: span 4;
+}
+
+.figure-wide {
+	margin: 1em 0 0 0;
+	padding: 0.5em;
+	grid-column: span 4;
+	background: #fff;
+}
+
+.major-text {
+	margin: 1em 0 0 0;
+	grid-column: span 4;
+}
+
+/* wider screens */
+@media (min-width: 690px) {
+
+	figure {
+		grid-column: span 2;
+	}	
+
+	.figure-wide {
+		grid-column: 2 / 5;
+	}
+
+	.major-text {
+		grid-column: 2 / 5;
+	}
+
+}
+
